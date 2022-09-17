@@ -1,7 +1,23 @@
- * {
+ *,
+ *::before,
+ *::after {
      box-sizing: border-box;
      margin: 0;
      padding: 0;
+ }
+
+ /* Clear fix hack */
+ .clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+ }
+
+ .clear {
+     clear: both;
  }
 
  /* FIRST SECTION */
@@ -117,3 +133,416 @@
  img {
      width: 100%;
  }
+
+ /* Box Model Hack */
+
+
+ /******************************************
+/* BASE STYLES
+/*******************************************/
+
+ html {
+     font-size: 62.5%
+         /* for REM font */
+ }
+
+
+ body {
+     font-family: 'Cinzel Decorative', cursive;
+     margin: 0;
+ }
+
+
+
+
+
+ header {
+     height: 112px;
+     background-color: #E7BB41;
+     color: rgb(0, 0, 0);
+
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: flex-start;
+ }
+
+
+ /* HEADER UPPER LEFT : ZEE BAKERY CONTAINER */
+ .headerLeftThird {
+     background-color: #393E41;
+     color: rgb(255, 255, 255);
+
+     height: 112px;
+     /* border: 1px dashed navy; */
+     width: 387px;
+
+     font-size: 4.5rem;
+     font-family: 'Pacifico', cursive;
+
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+ }
+
+
+ /* HEADER UPPER LEFT : SCALLOP DETAILS */
+ .shape {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate (-50%, -50%);
+     background-color: aquamarine;
+ }
+
+ .top,
+ .right,
+ .bottom,
+ .left {
+     background-color: blueviolet;
+     display: inline-block;
+     margin: 10px;
+     border: 1px solid black;
+ }
+
+ .top,
+ .bottom {
+     height: 10px;
+     width: 20px;
+ }
+
+ .right,
+ .left {
+     height: 20px;
+     width: 10px;
+ }
+
+ /* shape-outside: inset(20px 10px 20px 10px round 10px); */
+ /* background:red; */
+
+ .bottom {
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+ }
+
+
+
+
+
+ /* HEADER UPPER RIGHT : LINK CONTAINER  */
+ .headerRightThird {
+     background-color: #E7BB41;
+     color: rgb(0, 0, 0);
+
+     /* font-size: 2rem; */
+     font-family: 'Gentium Book Basic', serif;
+
+     display: flex;
+     justify-content: center;
+     flex-grow: 1;
+ }
+
+ .ulLinks {
+     display: flex;
+     justify-content: space-evenly;
+     flex-grow: 1;
+ }
+
+ .headerLinks {
+     background-color: #E7BB41;
+     color: rgb(0, 0, 0);
+
+     /* border: 2px dashed rgb(189, 12, 12);   */
+     /*              */
+     height: 112px;
+     width: 100%;
+
+
+     font-size: 3rem;
+     font-family: 'Gentium Book Basic', serif;
+
+     text-justify: center;
+     text-align: center;
+
+     display: flex;
+     flex-direction: column;
+     /* gap:20px; */
+     justify-content: space-evenly;
+     /* flex:content; */
+     flex-grow: 5;
+ }
+
+
+ /*
+.headerLinks:hover {
+  background-color: #e7bb41;
+  border: 2px dashed #FF595E;
+  border-radius: 4rem;
+}
+*/
+
+ .headerLinks:hover {
+     /* background-color: #E7BB41; */
+     background-color: #ff595f8b;
+
+     /* border: 2px dashed #FF595E; */
+     /* border-radius: 4rem; */
+ }
+
+
+ li {
+     list-style: none;
+     text-decoration: none;
+     /* border: 1px dashed navy; */
+ }
+
+
+ .aLink {
+     list-style: none;
+     text-decoration: none;
+
+     text-align: center;
+     text-justify: center;
+     /* border: 1px dashed navy; */
+ }
+
+
+ .aLink:hover {
+     /* border: 1px dashed navy; */
+     font-size: 3.5rem;
+     font-size: 3.2rem;
+
+     font-family: 'Gentium Book Basic', serif;
+     /* color:#FF595E; */
+     color: #000000;
+     color: #ffffff;
+ }
+
+
+
+
+
+
+
+
+
+ /* TEMPORARY PLACE HOLDER FOR MIDDLE OF THE BODY */
+
+ .tempCentralBody {
+     width: auto;
+     height: 600px;
+     display: flex;
+ }
+
+
+
+
+
+
+
+
+
+ footer {
+     width: auto;
+     height: 211px;
+
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+ }
+
+ .footerLeft {
+     font-size: 2.5rem;
+     font-family: 'Gentium Book Basic', serif;
+
+     background-color: #393E41;
+     color: rgb(255, 255, 255);
+
+     justify-content: center;
+     display: flex;
+     align-items: center;
+
+     width: 387px;
+
+ }
+
+
+
+ .footerMiddle {
+     font-size: 1rem;
+     font-family: 'Gentium Book Basic', serif;
+
+     background-color: #E7BB41;
+     color: rgb(0, 0, 0);
+     /* border: 2px dashed navy; */
+
+     display: flex;
+     justify-content: space-around;
+     flex-direction: column;
+
+     height: 211px;
+     flex-grow: 1;
+ }
+
+
+ .footerLinks {}
+
+
+
+ .ulSocial {
+     list-style: none;
+     /* border: 1px dashed navy; */
+
+     display: flex;
+     justify-content: space-around;
+
+     align-items: center;
+     width: 100%;
+ }
+
+ .liSocial {
+     list-style: none;
+     /* border: 1px dashed navy; */
+ }
+
+
+ .sCopyRight {
+     align-items: center;
+     justify-content: space-around;
+ }
+
+ .pCopyRight {
+     text-justify: center;
+     text-align: center;
+     font-size: 2.0rem;
+
+     align-items: center;
+ }
+
+ .imgSocial {
+     width: 50px;
+     height: 50px;
+ }
+
+
+
+
+ .footerRight {
+     font-size: 1rem;
+     font-family: 'Gentium Book Basic', serif;
+
+     display: flex;
+     width: 387px;
+     justify-content: space-around;
+
+
+     background-color: #393E41;
+     color: rgb(255, 255, 255);
+ }
+
+
+ .liSocialCupCake {
+     list-style: none;
+     /* border: 1px dashed navy; */
+
+     justify-content: center;
+     align-items: center;
+
+     text-justify: center;
+     flex-direction: row;
+     width: 387px;
+ }
+
+ .imgCupCake {
+     color: white;
+     width: 100px;
+     height: 100px;
+
+     filter: invert(100%);
+
+ }
+
+
+
+/* ==============================
+    ====reviews starts========= */
+
+
+ body #reviews{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(217, 220, 230, 0.644),rgba(4,9,30,0.7)),url("../images/cupcake.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.heading{
+    padding-top: 80px;
+    padding-bottom:80px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Pacifico', sans-serif;
+    font-size: 34px;
+}
+.reviews .slider{
+    padding:5px;
+    box-shadow:2px 2px 30px rgba(0,0,0,0.1);
+    border:2px solid rgba(0,0,0,.2);
+    border-radius:10px;
+    position: relative;
+    background-color: white;
+}
+.reviews .slider .profile-img{
+    position: absolute;
+    top: 20px; left: 20px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow:hidden;
+    margin-right: 20px;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.reviews .slider .user{
+    display: flex;
+    gap:10px;
+    align-items:center;
+    color: black;
+    padding-left: 150px;
+    padding-top: 40px;
+}
+.reviews .slider .user h3{
+    font-size: 25px;
+    font-family: 'Gentium Book Basic', serif;
+    font-weight: 700;
+}
+
+.reviews .slider .user i{
+    font-size: 25px;
+    color:yellow;
+    padding-top: 10px;
+}
+.reviews .slider p{
+    font-size:18px ;
+    color: black;
+    font-family: 'Gentium Book Basic', serif;
+    padding: 10px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    font-weight:400px ;
+}
+.swiper-button-next,
+.swiper-button-prev{
+    color: black !important;
+}
+
+/* =============reviews ends====== */
+
